@@ -31,14 +31,12 @@ Create parent element for popup layout with an ID or class, put the container el
 **Initialization**
  
     document.addEventListener('DOMContentLoaded', function() {
-          new Popup(
-              document.getElementById('my-popup'),
-              document.querySelectorAll('a'), 
-              {
-                closable: true
-              }
-          );
-        }) 
+      new Popup({
+        el: document.getElementById('my-popup'),
+        openers:  document.querySelectorAll('a'),
+        closable: true
+      });
+    }); 
      
     
 
