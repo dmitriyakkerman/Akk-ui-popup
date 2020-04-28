@@ -9,14 +9,14 @@
 }(typeof self !== 'undefined' ? self : this, function () {
 
   class Popup {
-    constructor(el, openers = [], options = {}) {
+    constructor(options = {}) {
 
-      if(!el || !openers) {
+      if(!options.el || !options.openers) {
         return
       }
 
-      this.el = el;
-      this.openers = openers;
+      this.el = options.el;
+      this.openers = options.openers;
       this.closable = options.closable || false;
       this.init();
     }
